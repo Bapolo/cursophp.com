@@ -1,17 +1,22 @@
 <?php
 
-    class Pessoa 
+class Login
+{
+    public $email;
+    public $senha;
+
+    public function logar()
     {
-        public $nome;
-        public $idade;
-
-        public function falar()
-        {
-            echo $this->nome." de ".$this->idade." anos de idade acabou de falar";
-        }
+        if ($this->email == "teste@teste.com" and $this->senha == "123456"):
+            echo "Logado com sucesso";
+        else:
+            echo "Os dados estão incorrectos, não foi possivel logar";
+        endif;
     }
+}
 
-    $pessoa = new Pessoa();
-    $pessoa->nome = "Jesus Pedro Bapolo";
-    $pessoa->idade = 24;
-    $pessoa->falar();
+$logar = new Login();
+
+$logar->email = "teste@teste.com";
+$logar->senha = "123456";
+$logar->logar();
