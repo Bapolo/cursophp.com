@@ -2,8 +2,28 @@
 
 class Login
 {
-    public $email;
-    public $senha;
+    private $email;
+    private $senha;
+
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function getSenha()
+    {
+        return $this->senha; 
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
+    }
+
+    public function setSenha($senha)
+    {
+        $this->senha = $senha;
+    }
 
     public function logar()
     {
@@ -17,6 +37,6 @@ class Login
 
 $logar = new Login();
 
-$logar->email = "teste@teste.com";
-$logar->senha = "123456";
+$logar->setEmail("teste@teste.com");
+$logar->setSenha("123456");
 $logar->logar();
